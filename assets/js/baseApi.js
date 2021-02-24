@@ -20,7 +20,7 @@ $.ajaxPrefilter(function (option) {
 
 
         option.complete = function (response) {
-            console.log(response);
+            // console.log(response);
             const { message, status } = response.responseJSON;
             if (message === '身份认证失败！' && status === 1) {
                 localStorage.removeItem('token');
